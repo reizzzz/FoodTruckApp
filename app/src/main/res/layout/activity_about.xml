@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Header Bar -->
+    <RelativeLayout
+        android:id="@+id/headerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#E0F7FA"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <ImageView
+            android:id="@+id/logoImage"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/logo4"
+            android:contentDescription="StreetEats Logo" />
+
+        <TextView
+            android:id="@+id/pageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <!-- Scrollable Developer Info Area -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/headerContainer"
+        android:layout_above="@id/bottomNav"
+        android:background="#FFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/aboutTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Developer Information"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center_horizontal" />
+
+            <!-- Developer Info -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name: Muhammad Irfan Najwan Bin Shaharum\nID Number: 2024936635"
+                android:padding="12dp"
+                android:background="#E0E0E0"
+                android:layout_marginTop="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name: Muhammad Hafiz Bin Mohd Rafi\nID Number: 2023149239"
+                android:padding="12dp"
+                android:background="#E0E0E0"
+                android:layout_marginTop="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name: Muhammad Zhafran Bin Zauri\nID Number: 2023393541"
+                android:padding="12dp"
+                android:background="#E0E0E0"
+                android:layout_marginTop="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name: Raimi Akasyah Bin Abdul Halim\nID Number: 2023105261"
+                android:padding="12dp"
+                android:background="#E0E0E0"
+                android:layout_marginTop="12dp" />
+
+            <!-- Subject and GitHub -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Subject Code: ICT602"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/githubLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GitHub Link: www.github.com/repo"
+                android:autoLink="web"
+                android:textColor="#0000EE"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Logout Button -->
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:layout_above="@id/bottomNav"
+        android:layout_marginBottom="30dp"
+        android:layout_marginHorizontal="16dp"
+        android:backgroundTint="#FF5252"
+        android:textColor="#FFFFFF"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="10dp" />
+
+    <!-- Copyright -->
+    <TextView
+        android:id="@+id/copyrightText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Copyright © 2025 StreetEats. All rights reserved."
+        android:textSize="12sp"
+        android:textColor="#888888"
+        android:layout_above="@id/btnLogout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp" />
+
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="#EEEEEE"
+        android:gravity="center"
+        android:layout_alignParentBottom="true">
+
+        <ImageButton
+            android:id="@+id/btnMap"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/maps2"
+            android:background="@null"
+            android:layout_marginHorizontal="36dp"
+            android:contentDescription="Map" />
+
+        <ImageButton
+            android:id="@+id/btnReport"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginHorizontal="36dp"
+            android:background="@null"
+            android:src="@drawable/insert2"
+            android:scaleType="fitCenter"
+            android:contentDescription="Report" />
+
+        <ImageButton
+            android:id="@+id/btnAbout"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/about2"
+            android:background="@null"
+            android:layout_marginHorizontal="36dp"
+            android:contentDescription="About" />
+
+        <ImageButton
+            android:id="@+id/btnProfile"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/more2"
+            android:background="@null"
+            android:layout_marginHorizontal="36dp"
+            android:contentDescription="Profile" />
+    </LinearLayout>
+</RelativeLayout>

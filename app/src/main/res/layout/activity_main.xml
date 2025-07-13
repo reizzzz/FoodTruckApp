@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <!-- Header Bar with Logo on Left and Title on Right -->
+
+    <!-- Google Map Fragment -->
+    <RelativeLayout
+        android:id="@+id/headerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#E0F7FA"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <!-- Logo aligned to start (left) -->
+        <ImageView
+            android:id="@+id/logoImage"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="StreetEats Logo"
+            android:src="@drawable/logo4" />
+
+        <!-- Page Title aligned to end (right) -->
+        <TextView
+            android:id="@+id/pageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="Maps"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <fragment
+        android:id="@+id/map_fragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_below="@id/headerContainer"
+        android:layout_above="@id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="#EEEEEE"
+        android:gravity="center"
+        android:layout_alignParentBottom="true">
+
+        <ImageButton
+            android:id="@+id/btnMap"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginHorizontal="36dp"
+            android:background="@null"
+            android:contentDescription="Map"
+            android:src="@drawable/maps2" />
+
+        <ImageButton
+            android:id="@+id/btnReport"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginHorizontal="36dp"
+            android:background="@null"
+            android:src="@drawable/insert2"
+            android:scaleType="fitCenter"
+            android:contentDescription="Report" />
+
+        <ImageButton
+            android:id="@+id/btnAbout"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/about2"
+            android:background="@null"
+            android:layout_marginHorizontal="36dp"
+            android:contentDescription="About" />
+
+        <ImageButton
+            android:id="@+id/btnProfile"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/more2"
+            android:background="@null"
+            android:layout_marginHorizontal="36dp"
+            android:contentDescription="Profile" />
+    </LinearLayout>
+</RelativeLayout>
