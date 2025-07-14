@@ -104,7 +104,7 @@
                 android:id="@+id/githubLink"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="GitHub Link: www.github.com/repo"
+                android:text="GitHub Link: https://github.com/reizzzz/FoodTruckApp"
                 android:autoLink="web"
                 android:textColor="#0000EE"
                 android:layout_marginTop="8dp" />
